@@ -218,4 +218,22 @@ Date:   Fri Jul 21 11:36:13 2017 +0800
    > git branch
    ```
 
+3. 切换分支
+
+   ```
+   > git checkout master
+   ```
+
+4. 合并到当前分支
+
+   ```
+   > git merge dev
+   ```
+
+5. 删除分支
+
+   ```
+   git branch -d dev
+   ```
+
    ​
