@@ -92,7 +92,11 @@ Date:   Fri Jul 21 11:36:13 2017 +0800
 
 > Untracked: 未被 `git add` 提交的文件 
 
-```&amp;amp;gt; 
+<<<<<<< HEAD
+```&amp;amp;amp;gt; 
+=======
+​```&amp;amp;amp;gt; 
+>>>>>>> error1
 > git diff HEAD -- readme.md
 ```
 
@@ -236,6 +240,12 @@ Date:   Fri Jul 21 11:36:13 2017 +0800
    git branch -d dev
    ```
 
+<<<<<<< HEAD
    ### 12.master
 
-   ​
+   
+=======
+
+### 12.master
+
+>>>>>>> error1
