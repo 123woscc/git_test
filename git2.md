@@ -93,7 +93,7 @@ Date:   Fri Jul 21 11:36:13 2017 +0800
 > Untracked: 未被 `git add` 提交的文件 
 
 <<<<<<< HEAD
-```&amp;amp;amp;gt; 
+```&amp;amp;amp;amp;gt; 
 =======
 ​```&amp;amp;amp;gt; 
 >>>>>>> error1
@@ -240,12 +240,32 @@ Date:   Fri Jul 21 11:36:13 2017 +0800
    git branch -d dev
    ```
 
-<<<<<<< HEAD
-   ### 12.master
+### 12.合并冲突解决
 
-   
-=======
+```
+> git status  #查看发生冲突的文件,然后打开
+```
 
-### 12.master
+Git用`<<<<<<<`，`=======`，`>>>>>>>`标记出不同分支的内容，我们修改如下后保存,再提交：
 
->>>>>>> error1
+> 就是人肉修改冲突文件后（其实不改也行就是确认一下），再次add and commit，系统就确认那个是最新(merge后）版本了。
+
+```
+> git add readme.md 
+> git commit -m "conflict fixed"
+[master 59bc1cb] conflict fixed
+```
+
+用带参数的`git log`也可以看到分支的合并情况：
+
+```
+$ git log --graph --pretty=oneline --abbrev-commit
+*   59bc1cb conflict fixed
+|\
+| * 75a857c AND simple
+* | 400b400 & simple
+|/
+* fec145a branch test
+...
+```
+
